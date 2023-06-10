@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Spring eCommerce</title>
+  <!-- Bootstrap core CSS -->
+  <div th:include="components/Animations/bootstrap.html::bootstraplink"></div>
+  <!-- Custom styles for this template -->
+  <link th:href="@{css/heroic-features.css}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div th:include="components/Navbar/navbar.html::navbar"></div>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Header -->
+    <div th:include="components/header/header.html::header"></div>
+    <!-- Page Features -->
+    <div th:include="components/Item/itemcatalogue.html::itemcatalogue"></div>
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <div th:include="components/footer/footer.html::footer"></div>
+  <!-- Bootstrap core JavaScript -->
+  <div th:include="components/Animations/bootstrap.html::bootstrapcontext"></div>
+</body>
+</html>
