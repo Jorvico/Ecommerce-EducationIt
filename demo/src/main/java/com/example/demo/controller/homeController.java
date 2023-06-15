@@ -10,8 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class homeController {
 
     @GetMapping("")
-    public String Home() {
+    public String home() {return "home.html";}
 
-        return "home.html";
-    }
+    @GetMapping("/producto")
+    public String itemdetail(){return "pages/itemdetail";}
+
+    @GetMapping("/carrito")
+    public String getCart(){return "pages/cart";}
+
+    @GetMapping("/orden")
+    public String orderdetail(){return "pages/orderdetail";}
+
+    @GetMapping("/guardarorden")
+    public String saveOrder(){return "redirect:/";}
 }

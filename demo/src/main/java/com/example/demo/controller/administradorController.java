@@ -9,8 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class administradorController {
 
     @GetMapping("")
-    public String Home() {
+    public String Home() {return "administrador/home.html";}
 
-        return "administrador/home.html";
-    }
+    /*@GetMapping("")
+    public String home(Model model) {
+        List<Producto> productos = productoService.findAll();
+        model.addAttribute("productos", productos);
+        return "administrador/home";
+    }*/
+
+    @GetMapping("/producto")
+    public String itemdetail() {return "pages/itemdetail";}
+
+    @GetMapping("/usuarios")
+    public String users() {return "pages/users";}
+
+    @GetMapping("/ordenes")
+    public String order() {return "pages/order";}
+
+    @GetMapping("/detalleorden")
+    public String orderdetail() {return "pages/orderdetail";}
 }

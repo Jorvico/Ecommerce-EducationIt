@@ -9,8 +9,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UsuarioController {
 
     @GetMapping("")
-    public String Home() {
+    public String home() {
+        return "usuario/home";
+    }
 
-        return "usuario/home.html";
+    @GetMapping("/registro")
+    public String register() {
+        return "pages/register";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "pages/login";
+    }
+
+    @GetMapping("/compras")
+    public String shopping() {
+        return "pages/shopping";
+    }
+
+    @GetMapping("/detallecompra")
+    public String shoppingdetail() {
+        return "pages/shoppingdetail";
+    }
+
+    @GetMapping("/cerrar")
+    public String closesession() {
+        return "redirect:/";
     }
 }
